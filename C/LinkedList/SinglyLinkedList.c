@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////
 //                                                                                            //
-//  Program Name : Singly-Linked-List                                                          //
+//  Program Name : Singly-Linked-List                                                         //
 //                                                                                            //
 //  Description :  This application performs all operations of singly linked list             //
 //  Author :       Girish Ashok Pawar                                                         //
