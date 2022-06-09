@@ -76,7 +76,7 @@ void conquer(PNODE Head, int l,int r,int mid);   // merge sort function
         Intilize the data of memory block
         If Head is NULL (empty linked list) simply insert newN in Head
         else @next of newN -> insert address of first node from head
-        @Head insert address of newN
+        @Head insert the address of newN
     STOP
 */
 void InsertAtFirst(
@@ -121,7 +121,7 @@ void InsertAtFirst(
         Create a Memory block and store address of it in struct node pointer.
         Intilize the data of memory block
         Traverse until reach to last element.
-        Inset the address of newN in last element->next
+        Insert the address of newN in last element->next
     STOP
 */
 void InsertAtLast(
@@ -161,8 +161,8 @@ void InsertAtLast(
 //  Function name :     InsertAtPos
 //  Input :             struct node **, Integer, Integer
 //  Output :            BOOL
-//  Description :       Insert a new node @ given position & return true 
-//                      if iPos > nodes in linked list
+//  Description :       Insert a new node @ given position &
+//                      if iPos > nodes in linked list  insert @ last & return true 
 //  TimeComplexity :    O(n)   ( n = iPos )
 //  Author :            Girish Ashok Pawar
 //  Date :              08/06/2022
@@ -239,7 +239,7 @@ BOOL InsertAtPos(
     Algorithm
     START
         If Head is NULL (empty linked list) simply return
-        Else Insert address of second element in Head
+        Else insert 2nd element address in Head.
         Free the space of old first node
     STOP
 */
