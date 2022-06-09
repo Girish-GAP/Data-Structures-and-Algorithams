@@ -56,6 +56,7 @@ void Display(PNODE Head);
 int Count(PNODE Head);
 int Search(PNODE Head, int iNo);
 void conquer(PNODE Head, int l,int r,int mid);   // merge sort function
+void divide(PNODE Head, int l, int r);   // merge sort function
 
 
 //////////////////////////////////////////////////////////////////////////
