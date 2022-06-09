@@ -2,7 +2,7 @@
 //                                                                                            //
 //  Program Name : Singly-Linke-List                                                          //
 //                                                                                            //
-//  Description :  This application performs all the operations of singly linked list         //
+//  Description :  This application performs all operations of singly linked list             //
 //  Author :       Girish Ashok Pawar                                                         //
 //  Date :         08-06-2022                                                                 //
 //                                                                                            //
