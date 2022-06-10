@@ -461,7 +461,7 @@ int Count(
         If node found return true else false.
     STOP
 */
-int Search(
+BOOL Search(
     PNODE Head, // Gives the address of first node of linkedList.
     int iNo     // The number to be search.
 )
