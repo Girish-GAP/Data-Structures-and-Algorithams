@@ -433,6 +433,11 @@ int Count(
 )
 {
     int iCnt = 0;
+    
+    if(Head == NULL)
+    {
+        return 0;
+    }
 
     while (Head != NULL)
     {
@@ -467,6 +472,11 @@ BOOL Search(
 )
 {
     BOOL iFlag = FALSE;
+    
+    if(Head == NULL)
+    {
+        return FALSE;
+    }
 
     // Traverse the LinkedList
     while (Head != NULL)
