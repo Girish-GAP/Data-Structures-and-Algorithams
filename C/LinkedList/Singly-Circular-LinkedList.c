@@ -480,6 +480,11 @@ int Count(
 )
 {
     int iCnt = 0;
+    
+    if(Head == NULL)
+    {
+        return 0;
+    }
 
     do
     {
@@ -516,6 +521,11 @@ BOOL Search(
 )
 {
     BOOL iFlag = FALSE;
+    
+    if(Head == NULL)
+    {
+        return FALSE;
+    }
 
     do
     {
