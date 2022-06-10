@@ -122,7 +122,7 @@ void InsertAtFirst(
         Create a Memory block and store address of it in struct node pointer.
         Intilize the data of memory block
         Traverse until reach to last element.
-        Insert the address of newN in last element->next
+        Insert the address of newN in last element->next.
     STOP
 */
 void InsertAtLast(
