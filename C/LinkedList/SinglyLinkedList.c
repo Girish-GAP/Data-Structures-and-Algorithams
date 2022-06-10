@@ -312,7 +312,7 @@ void DeleteAtLast(
 //////////////////////////////////////////////////////////////////////////
 //
 //  Function name :     DeleteAtPos
-//  Input :             struct node **
+//  Input :             struct node **, intiger
 //  Output :            BOOL
 //  Description :       Delete the node from a given position
 //  TimeComplexity :    O(n)   ( n = iPos )
