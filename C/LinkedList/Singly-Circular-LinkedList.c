@@ -18,7 +18,7 @@
 //
 //  Strcture name :     node
 //  Data :              intiger, struct node * (Self referential pointer)
-//  Description :       Represent the node of linked list
+//  Description :       Represent the node of linked list.
 //
 //////////////////////////////////////////////////////////////////////////
 typedef struct node
