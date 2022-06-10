@@ -1,9 +1,17 @@
-// Singly Linked List
+////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                            //
+//  Program Name : Singly-Circular-Linked-List                                                //
+//                                                                                            //
+//  Description :  This application performs all operations of singly linked list.            //
+//  Author :       Girish Ashok Pawar                                                         //
+//  Date :         08-06-2022                                                                 //
+//                                                                                            //
+////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 // Header file inclusion
 #include <stdio.h>
 #include <stdlib.h>
-
 
 
 //////////////////////////////////////////////////////////////////////////
