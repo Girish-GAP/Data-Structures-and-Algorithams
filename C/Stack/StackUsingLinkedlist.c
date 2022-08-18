@@ -217,8 +217,8 @@ void Display(PNODE Top)
 int main()
 {
     // Local variables
-    PNODE first = NULL, tail = NULL;
-    int iChoice = 1, value = 0, iRet = 0, pos = 0;
+    PNODE first = NULL;
+    int iChoice = 1, value = 0, iRet = 0;
     BOOL bAns = FALSE;
 
     printf("\nStack\n");
