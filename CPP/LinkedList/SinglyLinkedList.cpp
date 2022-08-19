@@ -156,6 +156,7 @@ void SinglyLL ::DeleteAtLast()
 
     if (Head->next == NULL)
     {
+        Head = NULL;
         delete (Head);
         size--;
     }
