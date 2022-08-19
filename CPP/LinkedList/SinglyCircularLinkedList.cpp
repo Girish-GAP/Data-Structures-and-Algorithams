@@ -36,6 +36,7 @@ public:
     void DeleteFirst();
     void DeleteLast();
     void DeleteAtPos(int iPos);
+    int Count();
     void Display();
 };
 
@@ -114,6 +115,7 @@ void SinglyCll ::InsertAtPos(int iNo, int iPos)
         Head = newN;
         newN->next = Head;
         Tail = newN;
+        size++;
     }
     else if (iPos == 1)
     {
@@ -128,6 +130,7 @@ void SinglyCll ::InsertAtPos(int iNo, int iPos)
             {
                 newN->next = temp->next;
                 temp->next = newN;
+                size++;
                 break;
             }
             temp = temp->next;
@@ -139,6 +142,7 @@ void SinglyCll ::InsertAtPos(int iNo, int iPos)
             newN->next = Head;
             Tail->next = newN;
             Tail = newN;
+            size++;
         }
     }
 }
@@ -155,6 +159,7 @@ void SinglyCll ::DeleteFirst()
         Tail = NULL;
         delete(Head);
         delete(Tail);
+        size--;
     }
     else
     {
@@ -162,6 +167,7 @@ void SinglyCll ::DeleteFirst()
         Head = Head->next;
         Tail->next = Head;
         delete(target);
+        size--;
     }
 }
 
@@ -181,6 +187,7 @@ void SinglyCll ::DeleteLast()
             Tail = NULL;
             delete(Head);
             delete(Tail);
+            size--;
         }
         else
         {
@@ -192,6 +199,7 @@ void SinglyCll ::DeleteLast()
             temp->next = Head;
             Tail = NULL;
             Tail = temp;
+            size--;
         }
     }
 }
@@ -224,6 +232,7 @@ void SinglyCll ::DeleteAtPos(int iPos)
                     temp->next = target->next;
                     target = NULL;
                     delete(target);
+                    size--;
                     break;
                 }
                 temp = temp->next;
@@ -255,6 +264,11 @@ void SinglyCll ::Display()
     } while (temp != Tail->next);
 }
 
+int SinglyCll :: Count()
+{
+    return size;
+}
+
 // Entry point function
 int main()
 {
@@ -273,6 +287,7 @@ int main()
     cout << ("5 : Delete the last node\n");
     cout << ("6 : Delete the node at desired position\n");
     cout << ("7 : Display the contents of linked list\n");
+    cout << ("8 : Count no. of nodes\n");
     cout << ("0 : Terminate the application\n");
 
     while (iChoice != 0)
@@ -302,8 +317,9 @@ int main()
             cin >> value;
             cout << ("Enter the position\n");
             cin >> pos;
-            lobj.InsertAtPos(pos, value);
+            lobj.InsertAtPos(value, pos);
             cout << "Data inserted\n";
+            break;
         case 4:
             lobj.DeleteFirst();
             cout << ("\nFirst element is deleted..\n");
@@ -324,6 +340,12 @@ int main()
         case 7:
             cout << ("Elemenet of Linked list are\n\n");
             lobj.Display();
+            break;
+
+        case 8:
+            cout << ("Count no. of nodes\n\n");
+            iRet = lobj.Count();
+            cout << "No. of nodes are : " << iRet << endl;
             break;
         
         case 0:
