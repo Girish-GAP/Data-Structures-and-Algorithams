@@ -186,7 +186,7 @@ bool SinglyLL ::DeleteAtPos(int iPos)
     {
         DeleteAtFirst();
     }
-    if (iPos > size)
+    if (iPos >= size)
     {
         DeleteAtLast();
         bAns = false;
