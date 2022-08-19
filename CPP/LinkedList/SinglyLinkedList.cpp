@@ -1,14 +1,26 @@
-// Singly linked list
+////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                            //
+//  Program Name : Singly-Linked-List                                                         //
+//                                                                                            //
+//  Description :  This application performs all operations of singly linked list             //
+//  Author :       Girish Ashok Pawar                                                         //
+//  Date :         19-08-2022                                                                 //
+//                                                                                            //
+////////////////////////////////////////////////////////////////////////////////////////////////   
 
+
+// Inclusion of header file
 #include <iostream>
 using namespace std;
 
+// Represent the node
 typedef struct node
 {
     int data;
     struct node *next;
 } NODE, *PNODE;
 
+// Linked list class
 class SinglyLL
 {
 private:
@@ -16,11 +28,9 @@ private:
     int size = 0;
 
 public:
-    SinglyLL()
-    {
-        Head = NULL;
-    }
 
+    // Function declarations / prototype
+    SinglyLL();
     void InsertAtFirst(int iNo);
     void InsertAtLast(int iNo);
     bool InsertAtPos(int iPos, int iNo);
@@ -32,6 +42,14 @@ public:
     void Display();
 };
 
+// Constructor
+SinglyLL :: SinglyLL()
+{
+    Head = NULL;
+    size = 0;
+}
+
+// Function defination
 void SinglyLL ::InsertAtFirst(int iNo)
 {
     // Memory allocation
@@ -68,7 +86,7 @@ void SinglyLL ::InsertAtLast(int iNo)
 
     if (Head == NULL)
     {
-        Head->next = newN;
+        Head = newN;
     }
     else
     {
@@ -98,7 +116,7 @@ bool SinglyLL ::InsertAtPos(int iPos, int iNo)
     {
         InsertAtFirst(iNo);
     }
-    else if (iPos >= size)
+    else if (iPos > size)
     {
         InsertAtLast(iNo);
         bAns = false;
@@ -167,7 +185,7 @@ bool SinglyLL ::DeleteAtPos(int iPos)
     {
         DeleteAtFirst();
     }
-    if (iPos >= size)
+    if (iPos > size)
     {
         DeleteAtLast();
         bAns = false;
@@ -235,20 +253,22 @@ int main()
 
     SinglyLL lobj;
 
+    cout << ("\n_________________________________________________\n");
+    cout << ("Linked list operations : \n\n");
+    cout << ("1 : Insert the node at first position\n");
+    cout << ("2 : Insert the node at last position\n");
+    cout << ("3 : Insert the node at  the desired position\n");
+    cout << ("4 : Delete the first node\n");
+    cout << ("5 : Delete the last node\n");
+    cout << ("6 : Delete the node at desired position\n");
+    cout << ("7 : Display the contents of linked list\n");
+    cout << ("8 : Count the number of nodes from linked list\n");
+    cout << ("9 : Search and check given element present or not \n");
+    cout << ("0 : Terminate the application\n");
+
     while (iChoice != 0)
     {
-        cout << ("\n_________________________________________________\n");
-        cout << ("Linked list operations : \n\n");
-        cout << ("1 : Insert the node at first position\n");
-        cout << ("2 : Insert the node at last position\n");
-        cout << ("3 : Insert the node at  the desired position\n");
-        cout << ("4 : Delete the first node\n");
-        cout << ("5 : Delete the last node\n");
-        cout << ("6 : Delete the node at desired position\n");
-        cout << ("7 : Display the contents of linked list\n");
-        cout << ("8 : Count the number of nodes from linked list\n");
-        cout << ("9 : Search and check given element present or not \n");
-        cout << ("0 : Terminate the application\n");
+        cout << ("\n___________________\n");
         cout << ("\nSelect Option -> ");
         cin >> iChoice;
         cout << ("\n_________________________________________________\n");
@@ -277,11 +297,11 @@ int main()
             bAns = lobj.InsertAtPos(pos, value);
             if (bAns == false)
             {
-                cout << ("\nData inserted at %d place..\n", pos);
+                cout << ("\nData inserted..\n", pos);
             }
             else
             {
-                cout << "\nData inserted at last place..! [ << pos << number of nodes are not present in SinglyLL ]\n";
+                cout << "\nData inserted at last place..! [ " << pos << " number of nodes are not present in SinglyLL ]\n";
             }
             break;
 
@@ -301,11 +321,11 @@ int main()
             bAns = lobj.DeleteAtPos(pos);
             if (bAns == false)
             {
-                cout << ("\nData deleted from %d place..\n", pos);
+                cout << "\nData deleted from " << pos <<" place..\n";
             }
             else
             {
-                cout << ("\nLast data deleted ..!\n", pos);
+                cout << "\nData deleted from " << pos <<" place..\n";
             }
 
             break;
@@ -317,7 +337,7 @@ int main()
 
         case 8:
             iRet = lobj.Count();
-            cout << "\nNumber of elements are : << iRet << endl;
+            cout << "\nNumber of elements are : "<< iRet << endl;
             break;
 
         case 9:
