@@ -281,7 +281,7 @@ int main()
             }
             else
             {
-                cout << ("\nData inserted at last place..! [ %d number of nodes are not present in SinglyLL ]\n", pos);
+                cout << "\nData inserted at last place..! [ << pos << number of nodes are not present in SinglyLL ]\n";
             }
             break;
 
@@ -317,7 +317,7 @@ int main()
 
         case 8:
             iRet = lobj.Count();
-            cout << ("\nNumber of elements are : %d\n", iRet);
+            cout << "\nNumber of elements are : << iRet << endl;
             break;
 
         case 9:
