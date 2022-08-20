@@ -392,7 +392,7 @@ int main()
         switch (iChoice)
         {
         case 1:
-            printf("Enter the data to Enqueue into the Queue\n");
+            printf("Enter data : \n");
             scanf("%d", &value);
             Insert(&first, value);
             printf("\nData Inserted into the tree\n");
