@@ -298,7 +298,7 @@ int main()
             bAns = lobj.InsertAtPos(pos, value);
             if (bAns == false)
             {
-                cout << ("\nData inserted..\n", pos);
+                cout << ("\nData inserted..\n");
             }
             else
             {
