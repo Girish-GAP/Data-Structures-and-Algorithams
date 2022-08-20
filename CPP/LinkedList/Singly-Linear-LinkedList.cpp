@@ -254,22 +254,20 @@ int main()
 
     SinglyLL lobj;
 
-    cout << ("\n_________________________________________________\n");
-    cout << ("Linked list operations : \n\n");
-    cout << ("1 : Insert the node at first position\n");
-    cout << ("2 : Insert the node at last position\n");
-    cout << ("3 : Insert the node at  the desired position\n");
-    cout << ("4 : Delete the first node\n");
-    cout << ("5 : Delete the last node\n");
-    cout << ("6 : Delete the node at desired position\n");
-    cout << ("7 : Display the contents of linked list\n");
-    cout << ("8 : Count the number of nodes from linked list\n");
-    cout << ("9 : Search and check given element present or not \n");
-    cout << ("0 : Terminate the application\n");
-
     while (iChoice != 0)
     {
-        cout << ("\n___________________\n");
+        cout << ("\n_________________________________________________\n");
+        cout << ("Linked list operations : \n\n");
+        cout << ("1 : Insert the node at first position\n");
+        cout << ("2 : Insert the node at last position\n");
+        cout << ("3 : Insert the node at  the desired position\n");
+        cout << ("4 : Delete the first node\n");
+        cout << ("5 : Delete the last node\n");
+        cout << ("6 : Delete the node at desired position\n");
+        cout << ("7 : Display the contents of linked list\n");
+        cout << ("8 : Count the number of nodes from linked list\n");
+        cout << ("9 : Search and check given element present or not \n");
+        cout << ("0 : Terminate the application\n");
         cout << ("\nSelect Option -> ");
         cin >> iChoice;
         cout << ("\n_________________________________________________\n");
