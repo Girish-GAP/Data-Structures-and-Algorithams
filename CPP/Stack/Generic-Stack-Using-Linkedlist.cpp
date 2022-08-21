@@ -136,26 +136,70 @@ int Stack<T> :: Count()
 int main()
 {
     // Local variables
+    Stack <char> sobj;
     int iChoice = 1, iRet = 0;
     char value = '\0';
     bool bAns = false;
 
-    Stack <char> sobj;
+    printf("\nStack\n");
 
-    printf("\nStack\n\n");
+    while (iChoice != 0)
+    {
+        printf("\n_________________________________________________\n");
+        printf("Stack operations : \n\n");
+        printf("1 : Push\n");
+        printf("2 : Pop\n");
+        printf("3 : isEmpty\n");
+        printf("4 : Count\n");
+        printf("5 : Display\n");
+        printf("0 : Terminate the application\n");
+        printf("\nSelect Option -> ");
+        scanf("%d", &iChoice);
+        printf("\n_________________________________________________\n");
 
-    sobj.Push('A');
-    sobj.Push('B');
-    sobj.Push('C');
-    sobj.Push('D');
-    sobj.Push('E');
+        switch (iChoice)
+        {
+        case 1:
+            printf("Enter the data to push into stack\n");
+            cin >> value;
+            sobj.Push(value);
+            printf("\nData pushed at top of stack\n");
+            break;
 
-    sobj.Display();
+        case 2:
+            sobj.Pop();
+            break;
 
-    sobj.Pop();
+        case 3:
+            bAns = sobj.isEmpty();
+            if (bAns == true)
+            {
+                printf("Stack is empty");
+            }
+            else
+            {
+                printf("Stack is not-empty");
+            }
+            break;
 
-    cout << endl;
-    sobj.Display();
+        case 4:
+            iRet = sobj.Count();
+            printf("Total elements in stack : %d", iRet);
+            break;
+
+        case 5:
+            sobj.Display();
+            break;
+
+        case 0:
+            printf("\nThankyou for using Giri Stack...\n\n");
+            break;
+
+        default:
+            printf("\nPlease enter proper choice\n");
+            break;
+        }
+    }
 
     return 0; // Return success to OS
 }
