@@ -118,7 +118,6 @@ int Stack :: Count()
 int main()
 {
     // Local variables
-    PNODE first = NULL;
     Stack sobj;
     int iChoice = 1, value = 0, iRet = 0;
     bool bAns = false;
