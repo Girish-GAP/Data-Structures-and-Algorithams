@@ -1,4 +1,13 @@
-// Stack Using Linkedlist
+////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                            //
+//  Program Name : Stack implementation using linkedlist                                      //
+//                                                                                            //
+//  Description :  This application implement the stack by using linkedlist which accept      //
+//                  any given datatype.                                                       //
+//  Author :       Girish Ashok Pawar                                                         //
+//  Date :         18-08-2022                                                                 //
+//                                                                                            //
+////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Header file inclusion
 #include<iostream>
